@@ -1,0 +1,26 @@
+(dp0
+S'ALG_DESC'
+p1
+VMakes a buffer using custom width
+p2
+sS'buffer'
+p3
+VBuffer width
+p4
+sS'ALG_CREATOR'
+p5
+VCésar Argul García
+p6
+sS'ALG_HELP_CREATOR'
+p7
+VCésar Argul García
+p8
+sS'output'
+p9
+VBuffered polygon layer
+p10
+sS'input'
+p11
+VPolygon layer
+p12
+s.
