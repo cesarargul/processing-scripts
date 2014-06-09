@@ -15,8 +15,6 @@ from shapely.geometry import Polygon
 from shapely.wkb import loads, dumps
 from shapely.ops import cascaded_union
 
-f = open('C:/aaa.txt','w+')
-
 def buffer(geom, dist):
     if type == 0:
 	return geom.buffer(dist, join_style=2, mitre_limit=abs(dist))
@@ -24,7 +22,6 @@ def buffer(geom, dist):
 	return geom.buffer(dist)
 
 def extract_pols(geom):
-    f.write(geom.geom_type+"\n")
     if geom.geom_type=='Polygon':
 	return [geom]
     elif geom.geom_type=='GeometryCollection' or geom.geom_type=='MultiPolygon':
@@ -35,8 +32,6 @@ def extract_pols(geom):
 	return pols
     return []
 
-# "input" contains the location of the selected layer.
-# We get the actual object,
 layer = processing.getobject(input)
 provider = layer.dataProvider()
 fields = provider.fields()
@@ -64,4 +59,3 @@ for inFeat in feats:
 	    writer.addFeature(outFeat)
 
 del writer
-f.close()
